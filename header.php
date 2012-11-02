@@ -13,8 +13,8 @@
 		<div class="wrapper">
 			<nav class="head_nav_wrap">
 				<ul class="head_nav">
-					<li id="" <?php echo (is_home() ? 'class="active home"' : 'home'); ?>><a href="<?php bloginfo('url'); ?>">Home</a></li>
-					<li class="articles">
+					<li <?php echo (is_home() ? 'class="active home"' : 'home'); ?>><a href="<?php bloginfo('url'); ?>">Home</a></li>
+					<li <?php echo (is_category() ? 'class="active articles"' : 'articles'); ?>>
 						<a href="#">Articles</a>
 						<ul>
 						<?php 

@@ -3,17 +3,20 @@ get_header();
 ?>
 <section class="container">
 	<section class="content">
-		<section class="summary">
+		<?php while(have_posts()) : the_post(); ?>
+		<section class="post_summary">
 			<header>
-				<h1>This is the post title</h1>
+				<h1 class="post_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</header>
-			<article>
-				This is the post that will be displayed, just a summarized version of this post.
+			<article class="post_content">
+				<?php the_excerpt(); ?>
 			</article>
-			<footer>
-				This is where date, tags, author, etc will be posted
+			<footer class="post_footer">
+				<?php echo get_the_author(); ?>
+				<?php echo get_the_date(); ?>
 			</footer>
 		</section>
+		<?php endwhile; ?>
 	</section>
 	<?php get_sidebar(); ?>
 
