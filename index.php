@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<section class="container">
+<section class="container clearfix">
 	<section class="content">
 		
 	</section>
