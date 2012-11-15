@@ -11,5 +11,11 @@ function load_fonts() {
 	wp_enqueue_style('googleFonts');
 }
 
+function new_excerpt_more($more) {
+    global $post;
+    return ' <a class="excerpt_link" href="' . get_permalink($post->ID) . '">...</a>';
+}
+
 add_action( 'after_setup_theme', 'register_menu' );
 add_action( 'wp_enqueue_scripts', 'load_fonts');
+add_filter('excerpt_more', 'new_excerpt_more');

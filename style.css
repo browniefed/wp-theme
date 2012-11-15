@@ -108,11 +108,19 @@ html[xmlns] .clearfix {
 
 	/*	Sidebar */
 	.sidebar {
-		float:left;
-		width: 200px;
-		background: #EEE;
+		float:right;
+		width: 180px;
+		background: #F5F5F5;
 		height: 100%;
 		margin:30px 0 0 20px;
+		padding: 20px 10px;
+		min-height: 300px;
+	}
+
+	.sidebar .social_links li {
+		display: block;
+		float: left;
+		margin-left: 10px;
 	}
 
 /* Navigation */
@@ -151,14 +159,20 @@ html[xmlns] .clearfix {
 		background: #1C74BB;
 		color: #FFF;
 	}
-	.head_nav > li ul {
+	.head_nav .subnav {
 		left: 0;
 		top: 70px;
 		position: absolute;
 		visibility: hidden;
-		width: 150px;
 		display: block;
 		background: #FFF;
+		width: 1140px;
+		z-index: 10;
+	}
+	.head_nav .subnav ul {
+		float: left;
+		display: block;
+		width: 150px;
 	}
 	.head_nav > li ul a {
 		height: 30px;
@@ -174,11 +188,21 @@ html[xmlns] .clearfix {
 		display: block;
 		background: #1C74BB;
 	}
-/* Categories */
+/* Sidebar */
+
+.sidebar > p {
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-top: 10px;
+    color:#242424;
+}
+
+/* Post/Summary Info */
 	.post_summary {
 		margin: 20px 0;
 		border-bottom: 1px dashed #CCC;
 		padding-bottom: 30px;
+		position: relative;
 	}
 	.post_title a {
 		font-weight: 700;
@@ -191,15 +215,68 @@ html[xmlns] .clearfix {
 	}
 	.post_content {
 		font-weight: 400;
-		font-size: 1.2em;
-		line-height: 1.5em;
+		font-size: 1em;
+		line-height: 1.4em;
 		margin: 10px 0;
+		color: #333;
 	}
+		.post_content a {
+			color: #176e85;
+			text-decoration: none;
+			font-style: italic;
+		}
+		.post_content a:hover {
+			color: #219ebf;
+		}
+		.post_content p {
+			margin: 10px 0;
+		}
+		.post_content ol, .post_content ul {
+			list-style-position: inside;
+			margin-left: 10px;
+		}
+		.post_content ol {
+			list-style-type: decimal;
+		}
+		.post_content ul {
+			list-style-type: disc;
+		}
 	.post_footer {
 		font-weight: 400;
 		font-size: .8em;
 		line-height: 1em;
 		color:#E3523D;
+	}
+		.post_footer a {
+			color: #333;
+			text-decoration: none;
+		}
+		.post_footer a:hover {
+			color: #555;
+			text-decoration: underline;
+		}
+	.side_date {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		top: 50%;
+		right: 10px;
+		margin-top: -25px;
+		background: #242424;
+	}
+	.side_date span {
+		color: #FFF;
+		display: block;
+		clear: both;
+		text-align: center;
+	}
+	.side_date .date_day {
+		font-size: 1.1em;
+		margin-top: 8px;
+	}
+	.side_date .date_mon {
+		font-size: .8em;
 	}
 
 /* Footer */
@@ -221,4 +298,35 @@ html[xmlns] .clearfix {
 }
 .site_footer a:hover {
 	color: #444;
+}
+
+/* Pagination */
+.pagination {
+clear:both;
+padding:20px 0;
+position:relative;
+font-size:11px;
+line-height:13px;
+}
+
+.pagination span, .pagination a {
+display:block;
+float:left;
+margin: 2px 2px 2px 0;
+padding:6px 9px 5px 9px;
+text-decoration:none;
+width:auto;
+color:#fff;
+background: #555;
+}
+
+.pagination a:hover{
+color:#fff;
+background: #3279BB;
+}
+
+.pagination .current{
+padding:6px 9px 5px 9px;
+background: #3279BB;
+color:#fff;
 }

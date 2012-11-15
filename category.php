@@ -15,6 +15,11 @@ get_header();
 				<?php echo get_the_author(); ?>
 				<?php echo get_the_date(); ?>
 			</footer>
+			<!--<span class="side_date">
+				<span class="date_day"><?php echo get_the_date('j'); ?></span>
+				<span class="date_mon"><?php echo get_the_date('M'); ?></span>
+			</span>
+			-->
 		</section>
 		<?php endwhile; ?>
 	</section>
